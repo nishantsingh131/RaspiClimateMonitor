@@ -10,7 +10,7 @@ dht_sensor = adafruit_dht.DHT11(board.D17)
 # Initialize Firebase
 cred = credentials.Certificate("serviceAccountKey.json")  # your Firebase service account JSON
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://pitempmonitor-default-rtdb.firebaseio.com'
+    xx
 })
 
 try:
