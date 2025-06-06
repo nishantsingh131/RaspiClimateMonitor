@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pi Temp & Humidity Monitor</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    .data-box { display: inline-block; padding: 20px; border: 2px solid #444; border-radius: 10px; margin: 10px; }
+    .value { font-size: 3em; color: #007bff; }
+    .label { font-size: 1.2em; color: #333; }
+  </style>
+</head>
+<body>
+
+  <h1>Raspberry Pi Temperature & Humidity Monitor</h1>
+
+  <div class="data-box">
+    <div class="value" id="temp">-- °C</div>
+    <div class="label">Temperature</div>
+  </div>
+
+  <div class="data-box">
+    <div class="value" id="humidity">-- %</div>
+    <div class="label">Humidity</div>
+  </div>
+
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+  <script>
+    // Your Firebase configuration from Firebase Console
+const firebaseConfig = {
+  apiKey: "AIzaSyCWsnmX6awVjEDe2cMtUH5Nk6vgPnJVrDU",
+  authDomain: "pitempmonitor.firebaseapp.com",
+  databaseURL: "https://pitempmonitor-default-rtdb.firebaseio.com",
+  projectId: "pitempmonitor",
+  storageBucket: "pitempmonitor.firebasestorage.app",
+  messagingSenderId: "264046643616",
+  appId: "1:264046643616:web:0585c55d7d81446963bcc5",
+  measurementId: "G-9X11TYR0LS"
+};
+
+    
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const dbRef = firebase.database().ref("sensorData");
+
+    // Listen for data changes
+    dbRef.on("value", (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        document.getElementById("temp").textContent = data.temperature + " °C";
+        document.getElementById("humidity").textContent = data.humidity + " %";
+      }
+    });
+  </script>
+</body>
+</html>
