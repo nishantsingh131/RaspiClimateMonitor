@@ -64,7 +64,7 @@ RaspiClimateMonitor is an end-to-end IoT project built with a Raspberry Pi and a
 
    ```bash
    sudo python3 main.py
-   ```
+   
 
 ### 🌐 Firebase Setup
 
@@ -115,5 +115,4 @@ MIT License – feel free to use and modify.
 Pull requests are welcome. For major changes, please open an issue first.
 
 ---
-````
- 
+
