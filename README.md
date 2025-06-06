@@ -49,24 +49,6 @@ RaspiClimateMonitor is an end-to-end IoT project built with a Raspberry Pi and a
 
 ---
 
-## 📁 Project Structure
-
-```
-
-RaspiClimateMonitor/
-├── main.py                  # Python script to read sensor & push to Firebase
-├── serviceAccountKey.json  # Firebase Admin SDK key (not committed)
-├── templates/
-│   └── index.html           # Web dashboard UI
-├── static/
-│   ├── style.css            # Styling for the dashboard
-│   └── script.js            # Firebase JS code for live updates
-├── README.md
-
-````
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 🔌 Raspberry Pi + Sensor
