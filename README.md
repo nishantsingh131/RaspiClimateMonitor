@@ -4,7 +4,7 @@
 ```markdown
 # 🌦️ RaspiClimateMonitor
 
-**RaspiClimateMonitor** is an end-to-end IoT project built with a Raspberry Pi and a DHT11 sensor to monitor **temperature and humidity** in real-time. The data is pushed to **Firebase Realtime Database** using Python and displayed on a responsive **web dashboard** using HTML, CSS, and JavaScript.
+RaspiClimateMonitor is an end-to-end IoT project built with a Raspberry Pi and a DHT11 sensor to monitor temperature and humidity in real-time. The data is pushed to Firebase Realtime Database using Python and displayed on a responsive web dashboard using HTML, CSS, and JavaScript.
 
 ---
 
