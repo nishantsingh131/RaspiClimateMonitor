@@ -58,7 +58,7 @@ RaspiClimateMonitor is an end-to-end IoT project built with a Raspberry Pi and a
    ```bash
    pip install adafruit-circuitpython-dht firebase-admin
    sudo apt install libgpiod2
-````
+
 
 3. Run the Python script:
 
@@ -115,5 +115,5 @@ MIT License – feel free to use and modify.
 Pull requests are welcome. For major changes, please open an issue first.
 
 ---
-
+````
  
